@@ -27,183 +27,6 @@
     max-width: 500px;
     margin: 0 auto;
   }
-  h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
-  .subtitle { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
-
-  /* Selectors */
-  .selector-row { display: flex; gap: 8px; margin-bottom: 12px; }
-  .selector-row label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: block; }
-  .selector-row .col { flex: 1; }
-  .pill-group { display: flex; gap: 4px; }
-  .pill {
-    flex: 1;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--card);
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .pill.active {
-    background: var(--accent-dim);
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-
-  /* Week strip */
-  .week-strip {
-    display: flex;
-    gap: 4px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 4px;
-    margin-bottom: 20px;
-    scrollbar-width: none;
-  }
-  .week-strip::-webkit-scrollbar { display: none; }
-  .week-pill {
-    min-width: 44px;
-    padding: 8px 0;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--card);
-    color: var(--muted);
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-  .week-pill.active {
-    background: var(--accent-dim);
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-  .week-pill.deload {
-    border-color: #3a3020;
-    color: var(--orange);
-  }
-  .week-pill.deload.active {
-    background: #2a2010;
-    border-color: var(--orange);
-  }
-
-  /* Week summary banner */
-  .week-banner {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-bottom: 16px;
-    font-size: 13px;
-    line-height: 1.5;
-  }
-  .week-banner .phase { font-weight: 700; color: var(--accent); }
-  .week-banner .phase.deload { color: var(--orange); }
-  .week-banner .detail { color: var(--muted); }
-
-  /* Exercise cards */
-  .exercise-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 14px;
-    margin-bottom: 8px;
-  }
-  .exercise-card .num {
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    line-height: 22px;
-    text-align: center;
-    border-radius: 6px;
-    background: var(--accent-dim);
-    color: var(--accent);
-    font-size: 12px;
-    font-weight: 700;
-    margin-right: 8px;
-  }
-  .exercise-card .name { font-weight: 600; font-size: 15px; }
-  .exercise-card .meta {
-    display: flex;
-    gap: 16px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-  }
-  .exercise-card .meta-item {
-    display: flex;
-    flex-direction: column;
-    min-width: 60px;
-  }
-  .exercise-card .meta-label {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--muted);
-    margin-bottom: 2px;
-  }
-  .exercise-card .meta-value {
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .exercise-card .note {
-    margin-top: 8px;
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.4;
-  }
-  .rir-easy { color: var(--green); }
-  .rir-mod { color: var(--accent); }
-  .rir-hard { color: var(--orange); }
-  .rir-max { color: var(--red); }
-
-  /* Rest info */
-  .rest-badge {
-    font-size: 11px;
-    color: var(--muted);
-    background: var(--bg);
-    border-radius: 6px;
-    padding: 2px 8px;
-    display: inline-block;
-    margin-top: 6px;
-  }
-
-  /* Warm-up toggle */
-  .warmup-toggle {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-bottom: 16px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .warmup-toggle .arrow { color: var(--muted); transition: transform 0.2s; }
-  .warmup-toggle.open .arrow { transform: rotate(90deg); }
-  .warmup-content {
-    display: none;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-top: 0;
-    border-radius: 0 0 10px 10px;
-    padding: 12px 14px;
-    margin-top: -18px;
-    margin-bottom: 16px;
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--muted);
-  }
-  .warmup-content.show { display: block; }
-
-  /* PIN Lock Screen */
   #lockScreen {
     position: fixed;
     inset: 0;
@@ -217,60 +40,95 @@
   #lockScreen.hidden { display: none; }
   .lock-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
   .lock-sub { font-size: 13px; color: var(--muted); margin-bottom: 30px; }
-  .pin-dots {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 30px;
-  }
+  .pin-dots { display: flex; gap: 14px; margin-bottom: 30px; }
   .pin-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid var(--border);
-    background: transparent;
-    transition: all 0.15s;
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 2px solid var(--border); background: transparent; transition: all 0.15s;
   }
-  .pin-dot.filled {
-    background: var(--accent);
-    border-color: var(--accent);
-  }
-  .pin-dot.error {
-    background: var(--red);
-    border-color: var(--red);
-  }
-  .pin-pad {
-    display: grid;
-    grid-template-columns: repeat(3, 72px);
-    gap: 12px;
-  }
+  .pin-dot.filled { background: var(--accent); border-color: var(--accent); }
+  .pin-dot.error { background: var(--red); border-color: var(--red); }
+  .pin-pad { display: grid; grid-template-columns: repeat(3, 72px); gap: 12px; }
   .pin-key {
-    width: 72px;
-    height: 52px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
-    font-size: 22px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-    transition: background 0.1s;
+    width: 72px; height: 52px; border-radius: 10px;
+    border: 1px solid var(--border); background: var(--card);
+    color: var(--text); font-size: 22px; font-weight: 600;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    user-select: none; transition: background 0.1s;
   }
   .pin-key:active { background: var(--accent-dim); }
   .pin-key.empty { visibility: hidden; }
   .pin-key.back { font-size: 16px; color: var(--muted); }
 
-  #appContent { display: none; }
-  #appContent.visible { display: block; }
+  /* App styles - loaded with decrypted content */
+  h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .selector-row { display: flex; gap: 8px; margin-bottom: 12px; }
+  .selector-row label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: block; }
+  .selector-row .col { flex: 1; }
+  .pill-group { display: flex; gap: 4px; }
+  .pill {
+    flex: 1; padding: 10px 0; text-align: center; font-size: 13px; font-weight: 600;
+    border: 1px solid var(--border); border-radius: 8px; background: var(--card);
+    color: var(--muted); cursor: pointer; transition: all 0.15s;
+  }
+  .pill.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+  .week-strip {
+    display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px; margin-bottom: 20px; scrollbar-width: none;
+  }
+  .week-strip::-webkit-scrollbar { display: none; }
+  .week-pill {
+    min-width: 44px; padding: 8px 0; text-align: center; font-size: 12px; font-weight: 600;
+    border: 1px solid var(--border); border-radius: 8px; background: var(--card);
+    color: var(--muted); cursor: pointer; flex-shrink: 0;
+  }
+  .week-pill.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+  .week-pill.deload { border-color: #3a3020; color: var(--orange); }
+  .week-pill.deload.active { background: #2a2010; border-color: var(--orange); }
+  .week-banner {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-bottom: 16px; font-size: 13px; line-height: 1.5;
+  }
+  .week-banner .phase { font-weight: 700; color: var(--accent); }
+  .week-banner .phase.deload { color: var(--orange); }
+  .week-banner .detail { color: var(--muted); }
+  .exercise-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px; margin-bottom: 8px;
+  }
+  .exercise-card .num {
+    display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center;
+    border-radius: 6px; background: var(--accent-dim); color: var(--accent);
+    font-size: 12px; font-weight: 700; margin-right: 8px;
+  }
+  .exercise-card .name { font-weight: 600; font-size: 15px; }
+  .exercise-card .meta { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+  .exercise-card .meta-item { display: flex; flex-direction: column; min-width: 60px; }
+  .exercise-card .meta-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 2px; }
+  .exercise-card .meta-value { font-size: 15px; font-weight: 600; }
+  .exercise-card .note { margin-top: 8px; font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .rir-easy { color: var(--green); }
+  .rir-mod { color: var(--accent); }
+  .rir-hard { color: var(--orange); }
+  .rir-max { color: var(--red); }
+  .rest-badge { font-size: 11px; color: var(--muted); background: var(--bg); border-radius: 6px; padding: 2px 8px; display: inline-block; margin-top: 6px; }
+  .warmup-toggle {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-bottom: 16px; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: 600;
+  }
+  .warmup-toggle .arrow { color: var(--muted); transition: transform 0.2s; }
+  .warmup-toggle.open .arrow { transform: rotate(90deg); }
+  .warmup-content {
+    display: none; background: var(--card); border: 1px solid var(--border); border-top: 0;
+    border-radius: 0 0 10px 10px; padding: 12px 14px; margin-top: -18px; margin-bottom: 16px;
+    font-size: 13px; line-height: 1.7; color: var(--muted);
+  }
+  .warmup-content.show { display: block; }
 </style>
 </head>
 <body>
 
-<!-- PIN Lock Screen -->
 <div id="lockScreen">
   <div class="lock-title">Workout Tracker</div>
   <div class="lock-sub">Enter PIN</div>
@@ -296,61 +154,22 @@
   </div>
 </div>
 
-<div id="appContent">
-<h1>Hypertrophy Program</h1>
-<p class="subtitle">Technogym Bench — 12 Weeks</p>
-
-<!-- Week selector -->
-<label style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;display:block;">Week</label>
-<div class="week-strip" id="weekStrip"></div>
-
-<!-- Workout selector -->
-<div class="selector-row">
-  <div class="col">
-    <label>Workout</label>
-    <div class="pill-group" id="workoutPills">
-      <div class="pill active" data-val="A" onclick="setWorkout('A')">A <span style="font-weight:400;color:var(--muted);font-size:11px;">Mon</span></div>
-      <div class="pill" data-val="B" onclick="setWorkout('B')">B <span style="font-weight:400;color:var(--muted);font-size:11px;">Wed</span></div>
-      <div class="pill" data-val="C" onclick="setWorkout('C')">C <span style="font-weight:400;color:var(--muted);font-size:11px;">Fri</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- Week banner -->
-<div class="week-banner" id="weekBanner"></div>
-
-<!-- Warm-up -->
-<div class="warmup-toggle" id="warmupToggle" onclick="toggleWarmup()">
-  <span>Warm-Up & Ramp Sets</span>
-  <span class="arrow">›</span>
-</div>
-<div class="warmup-content" id="warmupContent">
-  <strong style="color:var(--text);">General warm-up (5-8 min):</strong><br>
-  Brisk walk, cycling, or step-ups<br><br>
-  <strong style="color:var(--text);">Activation round:</strong><br>
-  8 bodyweight squats<br>
-  8 hip hinges<br>
-  8 incline push-ups on bench<br>
-  8 thoracic rotations/side<br>
-  20-sec plank<br><br>
-  <strong style="color:var(--text);">Ramp-up sets</strong> (first lower + first upper compound):<br>
-  1 → 10 reps very easy<br>
-  2 → 5-6 reps moderate<br>
-  3 → 2-3 reps (only if heavy or stiff)
-</div>
-
-<!-- Exercises -->
-<div id="exerciseList"></div>
-</div><!-- end appContent -->
+<div id="appContent"></div>
 
 <script>
-// --- PIN Lock ---
-const PIN_HASH = "af03a51e581f58ba77807426b6fffed5f72e11d9618c38ac397c0746027f70f8";
+const ENC = {
+  salt: "qD5oyQynqMnhw469QcjoxA==",
+  iv: "zfpYKxqPSPK5IfQq",
+  ct: "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"
+};
+
 let pinEntry = "";
 
-async function sha256(str) {
-  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,"0")).join("");
+function b64ToBytes(b64) {
+  const bin = atob(b64);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return bytes;
 }
 
 function updateDots() {
@@ -361,17 +180,43 @@ function updateDots() {
   }
 }
 
+async function decrypt(pin) {
+  const enc = new TextEncoder();
+  const salt = b64ToBytes(ENC.salt);
+  const iv = b64ToBytes(ENC.iv);
+  const ct = b64ToBytes(ENC.ct);
+
+  const keyMaterial = await crypto.subtle.importKey("raw", enc.encode(pin), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: salt, iterations: 100000, hash: "SHA-256" },
+    keyMaterial,
+    { name: "AES-GCM", length: 256 },
+    false,
+    ["decrypt"]
+  );
+
+  const plainBuf = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, key, ct);
+  return new TextDecoder().decode(plainBuf);
+}
+
 async function pinPress(n) {
   if (pinEntry.length >= 4) return;
   pinEntry += n;
   updateDots();
   if (pinEntry.length === 4) {
-    const hash = await sha256(pinEntry);
-    if (hash === PIN_HASH) {
+    try {
+      const html = await decrypt(pinEntry);
       document.getElementById("lockScreen").classList.add("hidden");
-      document.getElementById("appContent").classList.add("visible");
-      init();
-    } else {
+      const app = document.getElementById("appContent");
+      app.innerHTML = html;
+      // Execute any script tags in the decrypted content
+      const scripts = app.querySelectorAll("script");
+      scripts.forEach(s => {
+        const ns = document.createElement("script");
+        ns.textContent = s.textContent;
+        document.body.appendChild(ns);
+      });
+    } catch (e) {
       for (let i = 0; i < 4; i++) {
         document.getElementById("d" + i).classList.add("error");
       }
@@ -386,188 +231,6 @@ function pinBack() {
     updateDots();
   }
 }
-// --- End PIN Lock ---
-
-const WORKOUTS = {
-  A: [
-    { name: "Rear-foot-elevated split squat", reps: "8-12/leg", compound: true, ramp: true, note: "Complete left + right, then rest" },
-    { name: "Flat DB bench press", reps: "6-10", compound: true, ramp: true },
-    { name: "1-arm DB row", reps: "8-12/side", compound: true },
-    { name: "Seated DB overhead press", reps: "8-12", compound: true },
-    { name: "Seated lateral raise", reps: "12-20", compound: false, intensifyWk7: true },
-    { name: "Single-leg calf raise (DB)", reps: "12-20/leg", compound: false, intensifyWk7: true },
-    { name: "Dead bug", reps: "8-12/side", compound: false }
-  ],
-  B: [
-    { name: "DB Romanian deadlift", reps: "8-12", compound: true, ramp: true },
-    { name: "Incline DB press (30-45°)", reps: "8-12", compound: true, ramp: true },
-    { name: "Chest-supported DB row", reps: "10-15", compound: true },
-    { name: "Heel-elevated goblet squat", reps: "12-20", compound: true },
-    { name: "Incline DB curl", reps: "10-15", compound: false, intensifyWk7: true },
-    { name: "Lying DB triceps extension", reps: "10-15", compound: false, intensifyWk7: true },
-    { name: "Single-leg calf raise (DB)", reps: "12-20/leg", compound: false, intensifyWk7: true }
-  ],
-  C: [
-    { name: "Front-foot-elevated split squat", reps: "10-15/leg", compound: true, ramp: true, note: "Or reverse lunge. Left + right, then rest" },
-    { name: "DB squeeze press", reps: "10-15", compound: true, ramp: true, note: "When maxed: immediately do push-ups to 0-1 RIR" },
-    { name: "Single-leg DB Romanian deadlift", reps: "10-15/leg", compound: true, note: "Left + right, then rest" },
-    { name: "Chest-supported rear-delt row", reps: "12-20", compound: false, note: "Or reverse fly. Band face pulls if anchor available" },
-    { name: "Hammer curl", reps: "10-15", compound: false, intensifyWk7: true },
-    { name: "Close-grip push-up", reps: "12-20", compound: false, intensifyWk7: true, note: "Band pushdowns if anchor available" },
-    { name: "Reverse crunch", reps: "10-15", compound: false }
-  ]
-};
-
-const WEEKS = [
-  { wk:1,  phase:"Intro",       deload:false, sets:[2,2,2,2,2,2,2],       rir:"3",     focus:"Reacclimation — no grinding" },
-  { wk:2,  phase:"Ramp",        deload:false, sets:[3,3,3,3,2,2,2],       rir:"2-3",   focus:"Add reps, not aggression" },
-  { wk:3,  phase:"Build",       deload:false, sets:[3,3,3,3,3,3,3],       rir:"1-2 / 2", focus:"Increase load if top of range reached" },
-  { wk:4,  phase:"Deload",      deload:true,  sets:[2,2,2,2,1,1,1],       rir:"3-4",   focus:"No failure, no intensifiers" },
-  { wk:5,  phase:"Build",       deload:false, sets:[3,3,3,3,3,3,3],       rir:"2",     focus:"Start using knuckles for big jumps" },
-  { wk:6,  phase:"Hypertrophy", deload:false, sets:[4,4,3,3,3,3,3],       rir:"1-2",   focus:"First real hypertrophy week" },
-  { wk:7,  phase:"Intensify",   deload:false, sets:[4,4,3,3,3,3,3],       rir:"1",     focus:"Final set of select accessories → 0-1 RIR" },
-  { wk:8,  phase:"Deload",      deload:true,  sets:[2,2,2,1,1,1,1],       rir:"3-4",   focus:"Recovery" },
-  { wk:9,  phase:"Peak Vol.",    deload:false, sets:[4,4,4,3,3,3,2],       rir:"2",     focus:"Add bands/pauses/1.5 reps at load ceiling" },
-  { wk:10, phase:"Intensify",   deload:false, sets:[4,4,4,3,3,3,2],       rir:"1",     focus:"Final set accessories → 0-1 RIR; bands on presses/squats" },
-  { wk:11, phase:"Overreach",   deload:false, sets:[4,4,4,3,3,3,2],       rir:"1-2→0-1", focus:"One rest-pause exercise per session" },
-  { wk:12, phase:"Benchmark",   deload:false, sets:[3,3,3,2,2,2,2],       rir:"2",     focus:"One top set at 0-1 RIR on first lower + first press" }
-];
-
-let currentWeek = 0;
-let currentWorkout = "A";
-
-function init() {
-  const strip = document.getElementById("weekStrip");
-  WEEKS.forEach((w, i) => {
-    const el = document.createElement("div");
-    el.className = "week-pill" + (w.deload ? " deload" : "") + (i === 0 ? " active" : "");
-    el.textContent = w.wk;
-    el.onclick = () => setWeek(i);
-    strip.appendChild(el);
-  });
-  render();
-}
-
-function setWeek(i) {
-  currentWeek = i;
-  document.querySelectorAll(".week-pill").forEach((el, idx) => {
-    el.classList.toggle("active", idx === i);
-  });
-  render();
-}
-
-function setWorkout(w) {
-  currentWorkout = w;
-  document.querySelectorAll("#workoutPills .pill").forEach(el => {
-    el.classList.toggle("active", el.dataset.val === w);
-  });
-  render();
-}
-
-function getRirClass(rir) {
-  if (rir.includes("0")) return "rir-max";
-  if (rir.includes("1") && !rir.includes("3")) return "rir-hard";
-  if (rir.includes("2")) return "rir-mod";
-  return "rir-easy";
-}
-
-function getExerciseRir(week, exIdx, exercise) {
-  const w = week.wk;
-  const isCompound = exercise.compound;
-
-  if (week.deload) return "3-4";
-
-  if (w === 1) return "3";
-  if (w === 2) return "2-3";
-  if (w === 3) return isCompound ? "1-2" : "2";
-  if (w === 5) return "2";
-  if (w === 6) return "1-2";
-  if (w === 7) {
-    if (isCompound) return "1";
-    if (exercise.intensifyWk7) return "0-1 (final set)";
-    return "2";
-  }
-  if (w === 9) return "2";
-  if (w === 10) {
-    if (isCompound) return "1";
-    if (exercise.intensifyWk7) return "0-1 (final set)";
-    return "2";
-  }
-  if (w === 11) {
-    if (isCompound) return "1-2 → 0-1 (last set)";
-    if (exercise.intensifyWk7) return "0-1 (final set)";
-    return "2";
-  }
-  if (w === 12) {
-    if (exIdx === 0 || exIdx === 1) return "0-1 (top set)";
-    return "2";
-  }
-  return "2";
-}
-
-function render() {
-  const week = WEEKS[currentWeek];
-  const exercises = WORKOUTS[currentWorkout];
-
-  // Banner
-  const banner = document.getElementById("weekBanner");
-  const phaseClass = week.deload ? "phase deload" : "phase";
-  banner.innerHTML = `
-    <span class="${phaseClass}">Week ${week.wk} — ${week.phase}</span><br>
-    <span class="detail">${week.focus}</span>
-  `;
-
-  // Exercises
-  const list = document.getElementById("exerciseList");
-  list.innerHTML = "";
-
-  exercises.forEach((ex, i) => {
-    const sets = week.sets[i];
-    const rir = getExerciseRir(week, i, ex);
-    const rirClass = getRirClass(rir);
-    const rest = ex.compound ? "2-3 min" : "60-90s";
-
-    let noteHtml = "";
-    if (ex.ramp) noteHtml += '<span class="rest-badge">Ramp-up sets before work sets</span> ';
-    if (ex.note) noteHtml += `<div class="note">${ex.note}</div>`;
-    if (week.wk === 11 && ex.intensifyWk7) {
-      noteHtml += `<div class="note" style="color:var(--orange);">Rest-pause candidate: final set → rest 15-20s → 3-5 more reps</div>`;
-    }
-
-    const card = document.createElement("div");
-    card.className = "exercise-card";
-    card.innerHTML = `
-      <span class="num">${i + 1}</span><span class="name">${ex.name}</span>
-      <div class="meta">
-        <div class="meta-item">
-          <span class="meta-label">Sets</span>
-          <span class="meta-value">${sets}</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Reps</span>
-          <span class="meta-value">${ex.reps}</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">RIR</span>
-          <span class="meta-value ${rirClass}">${rir}</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Rest</span>
-          <span class="meta-value" style="color:var(--muted)">${rest}</span>
-        </div>
-      </div>
-      ${noteHtml}
-    `;
-    list.appendChild(card);
-  });
-}
-
-function toggleWarmup() {
-  document.getElementById("warmupToggle").classList.toggle("open");
-  document.getElementById("warmupContent").classList.toggle("show");
-}
-
-init();
 </script>
 </body>
 </html>
